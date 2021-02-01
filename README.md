@@ -3,6 +3,7 @@
 ###### Author: Raheem
 ###### Date: 2021.01.30
 ###### Source: https://hackmd.io/@Raheem/ByJHtQVxd
+
 ---
 
 ## Outline
@@ -21,7 +22,6 @@
 * IDE → Visual Studio Code
 * Language → Python 3.8.5
 * Module → hashlib, time
-
 
 ## 實作
 
