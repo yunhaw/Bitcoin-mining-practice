@@ -9,8 +9,8 @@
 ## Outline
 
 1. Reference
-1. 環境
-1. 實作
+2. 環境
+3. 實作
 
 ## Reference
 
@@ -29,7 +29,7 @@
 
 * 區塊屬性 = ( 區塊編號, 交易內容, 前一塊的雜湊值, 猜測值 )
 
-    | 區塊屬性      |
+    | `區塊屬性`     |
     |:------------- |
     | block_number  |
     | transactions  |
@@ -39,13 +39,12 @@
 * 雜湊值 ( Hash ) = block_number + transactions + previous_hash + Nonce
     ###### example：
     
-    | 區塊屬性        | 內容                                           | 
+    | `區塊屬性`     | `內容`                                         | 
     | ------------- | ---------------------------------------------- |
     | block_number  | 2                                              | 
     | transactions  | Raheem -> dog -> 20<p/>dog -> cat -> 45        |
     | previous_hash | 3db3bdbd49052dd9c713e02f91c1e1bda1704b7732024a49d98277b632300cd9 |
     | Nonce         | 7417                                           |
-
 
     經過 SHA256 →
     Hash = 000031a57e9c7479cd6bf6f77c953b843eafad24b36cbded64c5c3af0970d658
@@ -68,11 +67,11 @@
 * 輸入區塊屬性與自訂的Nonce值，生成區塊的Hash值
 * 
     1.  block_number = 1
-    1.  transactions = Raheeem -> dog -> 20, dog -> cat -> 45
-    1.  previous_hash = 0000000000000000000000000000000000000000000000000000000000000000    
+    2.  transactions = Raheeem -> dog -> 20, dog -> cat -> 45
+    3.  previous_hash = 0000000000000000000000000000000000000000000000000000000000000000    
     4.  Nonce = 2
 
-```python=
+```python
 from hashlib import sha256
 # SHA256函式
 def SHA256(text):
@@ -109,11 +108,11 @@ if __name__ == '__main__':
 * 輸入區塊屬性與難度 ( Difficulty )
 * 
     1.  block_number = 2
-    1.  transactions = Raheeem -> dog -> 20, dog -> cat -> 45
-    1.  previous_hash = 3db3bdbd49052dd9c713e02f91c1e1bda1704b7732024a49d98277b632300cd9
-    1.  Difficulty = 4
+    2.  transactions = Raheeem -> dog -> 20, dog -> cat -> 45
+    3.  previous_hash = 3db3bdbd49052dd9c713e02f91c1e1bda1704b7732024a49d98277b632300cd9
+    4.  Difficulty = 4
 
-```python=
+```python
 import time 
 from hashlib import sha256
 
@@ -191,11 +190,11 @@ if __name__ == '__main__':
 * 輸入區塊屬性與已經得到的Nonce值，可檢查該區塊的Hash與設定的難度是否一致
 * 
     1.  block_number = 2
-    1.  transactions = Raheeem -> dog -> 20, dog -> cat -> 45
-    1.  previous_hash = 3db3bdbd49052dd9c713e02f91c1e1bda1704b7732024a49d98277b632300cd9
-    1.  Nonce = 7417
+    2.  transactions = Raheeem -> dog -> 20, dog -> cat -> 45
+    3.  previous_hash = 3db3bdbd49052dd9c713e02f91c1e1bda1704b7732024a49d98277b632300cd9
+    4.  Nonce = 7417
 
-```python=
+```python
 from hashlib import sha256
 # SHA256函式
 def SHA256(text):
